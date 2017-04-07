@@ -24,7 +24,7 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] array = new int[10];         //change to 20 !!!
+        int[] array = new int[20];
         for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(reader.readLine());
         }
@@ -43,9 +43,9 @@ public class Solution {
         int currentMaxIndex;
         int exchange;
         for (int i = 0; i < array.length - 1; i++) {
-            currentMaxIndex = array[i];
+            currentMaxIndex = i;
             for (int j = i + 1; j < array.length; j++) {
-                if (array[j] > array[i]) {
+                if (array[j] > array[currentMaxIndex]) {
                     currentMaxIndex = j;
                 }
             }
